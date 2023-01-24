@@ -17,7 +17,8 @@
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "client:start": "cd packages/client && yarn run start"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
