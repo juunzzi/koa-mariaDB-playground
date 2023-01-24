@@ -1,3 +1,27 @@
 {
-  "packageManager": "yarn@3.3.1"
+  "name": "koa-mariaDB-playground",
+  "packageManager": "yarn@3.3.1",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "pinst": "^3.0.0",
+    "prettier": "^2.8.3"
+  },
+  "scripts": {
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }
