@@ -18,7 +18,8 @@
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "lint-staged": "lint-staged",
-    "client:start": "cd packages/client && yarn run start"
+    "client:start": "cd packages/client && yarn start",
+    "server:start": "cd packages/server && yarn start"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
