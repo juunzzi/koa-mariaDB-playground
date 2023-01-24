@@ -1,25 +1,30 @@
 {
-  "name": "koa-mariaDB-playground",
+  "name": "playground",
   "packageManager": "yarn@3.3.1",
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/**/*"
     ]
   },
   "devDependencies": {
-    "eslint": "^8.32.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.0",
     "pinst": "^3.0.0",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "tsconfig-paths": "^4.1.2",
+    "typescript": "*",
+    "typescript-transform-paths": "^3.4.6"
   },
   "scripts": {
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "lint-staged": "lint-staged",
-    "client:start": "cd packages/client && yarn start",
-    "server:start": "cd packages/server && yarn start"
+    "start:client": "cd packages/client && yarn start",
+    "start:server": "cd packages/server && yarn start"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
