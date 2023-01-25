@@ -1,4 +1,5 @@
 function App() {
+  console.log('hi');
   return <div className="App"></div>;
 }
 
